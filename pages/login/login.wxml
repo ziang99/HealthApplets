@@ -1,0 +1,23 @@
+<!--pages/login/login.wxml-->
+<view class="login_content" style="margin-top:{{marginTop}}px;">
+  <!-- logo图 -->
+  <image src="../../utils/image/logo.png" class="logo"></image>
+  <!-- 登录表单 -->
+  <form class="login_form" bindsubmit="userInfo">
+    <view>
+      <text class="iconfont icon-yonghuming1"></text>
+      <input type="text" name="username" value="" placeholder="请输入学号" placeholder-class="ph_username" focus="{{unFocus}}" confirm-type="next" bindconfirm="confirmNext" adjust-position="{{false}}"></input>
+    </view>
+    <view>
+      <text class="iconfont icon-mima"></text>
+      <input type="text" name="password" value="" password placeholder="请输入密码" placeholder-class="ph_password" focus="{{pwFocus}}" adjust-position="{{false}}"></input>
+    </view>
+    <!-- 注册 -->
+    <text class="registe" bindtap="goRegiste">立即注册</text>
+    <button form-type="submit" class="button">登录</button>
+  </form>
+  <!-- 提示信息 -->
+  <van-toast id="van-toast" />
+  <!-- 底部 -->
+  <view class="ascription">河北工程技术学院-软件学院</view>
+</view>

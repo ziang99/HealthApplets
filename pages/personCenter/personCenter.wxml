@@ -1,0 +1,51 @@
+<!--pages/personCenter/personCenter.wxml-->
+<!-- 个人页背景 -->
+<view class="userBg">
+  <view class="user">
+    <open-data class="headimage" type="userAvatarUrl" default-avatar="../../utils/image/defaultAvatar.png"></open-data>
+    <open-data class="userName" type="userNickName" default-text="健康统计"></open-data>
+  </view>
+</view>
+
+<!-- 功能列表 -->
+<view class="option">
+  <!-- 个人信息 -->
+  <view class="option_s" bindtap="goinfoDetail">
+    <view>
+      <text class="iconfont icon-gerenxinxi lefticon"></text>
+      <text class="text">个人信息</text>
+    </view>
+    <icon class="iconfont icon-iconfontjiantou5"></icon>
+  </view>
+
+  <!-- 我的消息 -->
+  <view class="option_s" bindtap="none">
+    <view>
+      <text class="iconfont icon-xiaoxi lefticon"></text>
+      <text class="text">我的消息</text>
+    </view>
+    <icon class="iconfont icon-iconfontjiantou5"></icon>
+  </view>
+
+  <!-- 我的健康码 -->
+  <view class="option_s" bindtap="none">
+    <view>
+      <text class="iconfont icon-weibiaoti-- lefticon"></text>
+      <text class="text">我的健康码</text>
+    </view>
+    <icon class="iconfont icon-iconfontjiantou5"></icon>
+  </view>
+
+  <!-- 设置 -->
+  <view class="option_s" bindtap="none">
+    <view>
+      <text class="iconfont icon-shezhi lefticon"></text>
+      <text class="text">设置</text>
+    </view>
+    <icon class="iconfont icon-iconfontjiantou5"></icon>
+  </view>
+
+  <!-- 提示信息 -->
+  <van-toast id="van-toast" />
+
+</view>

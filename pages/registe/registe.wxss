@@ -1,0 +1,64 @@
+/* pages/registe/registe.wxss */
+.logo{
+	width: 250rpx;
+	height: 260rpx;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 110rpx;
+}
+.login_form{
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+.login_form view{
+  border-bottom: #25c8b5 solid 1rpx;
+  margin-bottom: 55rpx;
+  display: flex;
+  align-items: center;
+}
+.login_form view:nth-child(3){
+  margin-bottom: 15rpx;
+}
+.login_form view text{
+  color: #25c8b5;
+  font-size: 46rpx;
+}
+.login_form view input{
+  margin-left: 38rpx;
+}
+.ph_username, .ph_password{
+  color: #25c8b5;
+  font-size: 30rpx;
+}
+.button{
+  background-color: #25c8b5;
+  color: #fff;
+  width: 280rpx;
+	height: 80rpx;
+  line-height: 80rpx;
+	border-radius: 27rpx;
+  font-size: 32rpx;
+  margin-top: 110rpx;
+}
+.ascription{
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  font-size: 24rpx;
+  color: #999;
+  margin-bottom: 10rpx;
+}
+
+.registe{
+  color: #25c8b5;
+  font-size: 26rpx;
+  position: absolute;
+  right: 0;
+  margin-bottom: -5rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "pageTop": "/components/pageTop/pageTop",
+    "van-steps": "@vant/weapp/steps/index"
+  }
+}

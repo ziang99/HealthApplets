@@ -1,0 +1,29 @@
+/* pages/listDetail/listDetail.wxss */
+.image{
+  display: block;
+  width: 96%;
+  margin: 0 auto;
+  height: 360rpx;
+}
+.titleBox{
+  border-bottom: #999 solid 1rpx;
+  padding: 10rpx 0;
+  margin: 0 20rpx;
+  box-sizing: border-box;
+  text-align: center;
+}
+.title{
+  display: block;
+  font-weight: bold;
+}
+.date{
+  display: block;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+}
+
+.content{
+  display: block;
+  margin: 20rpx;
+  font-size: 32rpx;
+}

@@ -1,0 +1,72 @@
+/* pages/healthStatus/healthStatus.wxss */
+page{
+  background-color: #e6fffc;
+}
+.stepsBox{
+  background-color: #e6fffc !important;
+  width: 94%;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+}
+.van-step--horizontal .van-step__circle-container{
+  background-color: #e6fffc!important;
+}
+.van-icon {
+  font-size: 16px !important;
+}
+
+.switchBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: #eee solid 1rpx;
+  padding: 30rpx 20rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 30rpx;
+  width: 94%;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+}
+.switchBox text{
+  font-size: 30rpx;
+}
+.switch{
+  margin-right: 20rpx;
+}
+.switchBox view{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.temperature{
+  width: 100%;
+  height: 108rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  
+}
+.phclass{
+  font-size: 30rpx;
+}
+.temperatureBox{
+  display: flex;
+  align-items: center;
+  padding-right: 20rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 30rpx;
+  width: 94%;
+  margin: 0 auto;
+}
+
+.button{
+  background-color: #25c8b5;
+  color: #fff;
+  width: 280rpx;
+	height: 80rpx;
+  line-height: 80rpx;
+	border-radius: 27rpx;
+  font-size: 32rpx;
+  margin-top: 110rpx;
+}

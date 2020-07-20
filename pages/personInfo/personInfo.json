@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "pageTop": "/components/pageTop/pageTop"
+  }
+}

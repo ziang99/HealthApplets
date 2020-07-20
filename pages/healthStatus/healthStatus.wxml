@@ -1,0 +1,90 @@
+<!--pages/healthStatus/healthStatus.wxml-->
+<!-- 顶部标题 -->
+<pageTop title="{{title}}" />
+<!-- 步骤条 -->
+<van-steps 
+  custom-class="stepsBox"
+  steps="{{ steps }}" 
+  active="{{ active }}" 
+  active-icon="checked"
+  inactive-icon="checked"
+  active-color="#25c8b5"
+  inactive-color="#ddd"
+/>
+<!-- 表单 -->
+<form bindsubmit="healthInfo">
+  <view class="switchBox">
+    <text>近14天是否接触新冠肺炎确诊或疑似患者</text>
+    <view>
+      <van-switch 
+        class="switch" 
+        name="contact" 
+        checked="{{contactStatus}}" 
+        size="20px"
+        bind:change="onContact" 
+        active-color="#25c8b5"
+        inactive-color="#fff"
+      />
+      <text>是</text>
+    </view>
+  </view>
+
+  <view class="switchBox">
+    <text>您是否有感冒样症状，例如乏力、咳嗽、发烧、头痛</text>
+    <view>
+      <van-switch 
+        class="switch" 
+        name="cold" 
+        checked="{{coldStatus}}" 
+        size="20px"
+        bind:change="onCold" 
+        active-color="#25c8b5"
+        inactive-color="#fff"
+      />
+      <text>是</text>
+    </view>
+  </view>
+
+  <view class="switchBox">
+    <text>您是否有喘憋、呼吸急促、恶心、呕吐、腹泻</text>
+    <view>
+      <van-switch 
+        class="switch" 
+        name="symptom" 
+        checked="{{symptomStatus}}" 
+        size="20px"
+        bind:change="onSymptom" 
+        active-color="#25c8b5"
+        inactive-color="#fff"
+      />
+      <text>是</text>
+    </view>
+  </view>
+
+  <view class="switchBox">
+    <text>近14天您是否经过或逗留高风险地区</text>
+    <view>
+      <van-switch 
+        class="switch" 
+        name="dangerous" 
+        checked="{{dangerousStatus}}" 
+        size="20px"
+        bind:change="onDangerous" 
+        active-color="#25c8b5"
+        inactive-color="#fff"
+      />
+      <text>是</text>
+    </view>
+  </view>
+
+  <view class="temperatureBox">
+    <input bindfocus="tempFocus" class="temperature" type="digit" name="temperature" maxlength="5" placeholder="请输入您的当前体温" placeholder-class="phclass"></input>
+    <text>℃</text>
+  </view>
+
+  <!-- 提示信息 -->
+  <van-toast id="van-toast" />
+  <button form-type="submit" class="button">确认提交</button>
+</form>
+
+

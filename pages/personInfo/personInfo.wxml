@@ -1,0 +1,56 @@
+<!--pages/index/index.wxml-->
+<!-- 顶部标题 -->
+<pageTop title="{{title}}" />
+<!-- 表单 -->
+<form bindsubmit="personalInfo">
+  <!-- 姓名 -->
+  <view class="inputBox">
+    <text class="iconfont icon-ziyuan"></text>
+    <van-field class="input" name="name" value="{{name}}" clearable placeholder="请输入您的姓名" maxlength="5" error-message="{{nameErr}}" border="{{false}}" size="large" bind:input="isName" />
+  </view>
+
+  <!-- 性别 -->
+  <view class="inputBox">
+    <text class="iconfont icon-xingbie"></text>
+    <van-field class="input" name="gender" value="{{gender}}" placeholder="请选择性别" error-message="{{genderErr}}" border="{{false}}" right-icon="iconfonticonfonti2" readonly bind:click-icon="selectgender" size="large" bind:input="isGender">
+  <van-icon class="iconfont" class-prefix="icon" slot="right-icon" name="iconfonticonfonti2"></van-icon></van-field>
+  </view>
+  <!-- 性别选择 -->
+  <van-popup show="{{showGender}}" position="bottom" round bind:close="onCloseGender">
+    <van-picker columns="{{columnsGender}}" show-toolbar bind:confirm="onconfirmGender" bind:cancel="oncancelGender" />
+  </van-popup>
+
+  <!-- 电话 -->
+  <view class="inputBox">
+    <text class="iconfont icon-09"></text>
+    <van-field class="input" name="phone" value="{{phone}}" type="number" clearable placeholder="请输入您的常用电话" maxlength="11" error-message="{{phoneErr}}" border="{{false}}" size="large" bind:input="isPhone" />
+  </view>
+  <!-- QQ -->
+  <view class="inputBox">
+    <text class="iconfont icon-87"></text>
+    <van-field class="input" name="qq" value="{{qq}}" type="number" clearable placeholder="请输入您的QQ" maxlength="16" error-message="{{qqErr}}" border="{{false}}" size="large" bind:input="isqq" />
+  </view>
+
+  <!-- 班级 -->
+  <view class="inputBox">
+    <text class="iconfont icon-banjiguanli"></text>
+    <van-field class="input" name="classes" value="{{classvalue}}" placeholder="请选择您的班级" error-message="{{classErr}}" border="{{false}}" right-icon="iconfonticonfonti2" readonly bind:click-icon="selectclass" size="large" bind:input="isClass" >
+    <van-icon class="iconfont" class-prefix="icon" slot="right-icon" name="iconfonticonfonti2"></van-icon>
+    </van-field>
+  </view>
+  <!-- 班级选择 -->
+  <van-popup show="{{showClass}}" position="bottom" round bind:close="onCloseClass">
+    <van-picker columns="{{columnsClass}}" loading="{{false}}" show-toolbar bind:confirm="onconfirmClass" bind:cancel="oncancelClass" bind:change="onChangeClass" />
+  </van-popup>
+
+  <!-- 住址 -->
+  <view class="inputBox">
+    <text class="iconfont icon-zhuzhi"></text>
+    <van-field class="input" name="address" value="{{address}}" clearable maxlength="90" placeholder="请输入您的现住址" error-message="{{addressErr}}" border="{{false}}" size="large" bind:input="isAddress" adjust-position="{{false}}" />
+  </view>
+
+  <!-- 提示信息 -->
+  <van-toast id="van-toast" />
+
+  <button form-type="submit" class="button">确认提交</button>
+</form>

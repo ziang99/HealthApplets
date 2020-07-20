@@ -1,0 +1,28 @@
+<!--pages/activityTrack/activityTrack.wxml-->
+<view class="dangerArea" style="height: {{dangerAreaHeight}}px;">
+  <!-- 顶部标题 -->
+  <van-sticky>
+    <pageTop title="{{title}}" />
+  </van-sticky>
+
+  <!-- 功能说明 -->
+  <view class="explain">
+    <view bindtap="moveTolocation">我的位置</view>
+    <view bindtap="showPolyline">近四十天活动轨迹</view>
+  </view>
+
+  <!-- 地图 -->
+  <map 
+    id="myMap"
+    class="map"
+    latitude="{{latitude}}"
+    longitude="{{longitude}}"
+    markers="{{markers}}"
+    show-compass
+    show-location
+    scale="{{scale}}"
+    bindregionchange="regionChange"
+    polyline="{{polyline}}"
+  ></map>
+
+</view>

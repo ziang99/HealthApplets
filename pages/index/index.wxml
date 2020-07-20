@@ -1,0 +1,47 @@
+<!--pages/index/index.wxml-->
+<view>
+  <!-- 顶部轮播 -->
+  <view class="swiperBox">
+    <!-- 轮播图 -->
+    <swiper autoplay circular interval="3000" easing-function="easeOutCubic">
+      <swiper-item wx:for="{{swiper}}" wx:key="index">
+        <image class="swiperImage" src="{{item.url}}"></image>
+      </swiper-item>
+    </swiper>
+    <!-- 通知 -->
+    <van-notice-bar
+      class="notice"
+      text="{{noticeText}}"
+      color="#fff"
+      backgroundColor="#000"
+    />
+  </view>
+
+  <!-- 导航 -->
+  <view class="navBox">
+    <view wx:for="{{navList}}" wx:key="index" bindtap="goIn" data-id="{{item.id}}">
+      <image src="{{item.img}}" class="navImage"></image>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+
+  <!-- 列表内容 -->
+  <scroll-view style="height: {{listBoxHeight - 10}}px;" class="listContent" scroll-y enable-back-to-top>
+    <view wx:for="{{readList}}" wx:key="index" class="plateBox">
+      <!-- 标题 -->
+      <view class="titleBox">
+        <text class="title">{{item.content}}</text>
+        <text class="more">更多</text>
+      </view>
+      <!-- 列表 -->
+      <view wx:for="{{item.childrens}}" wx:for-item="citem" wx:key="index" class="listBox" bindtap="goDetail" data-id="{{citem.id}}">
+        <image src="{{citem.img}}"></image>
+        <text>{{citem.content}}</text>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 提示信息 -->
+  <van-toast id="van-toast" />
+
+</view>

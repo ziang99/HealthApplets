@@ -1,0 +1,6 @@
+<!--components/pageTop/pageTop.wxml-->
+<view class="pagetop">
+  <view class="title">
+    <text>{{title}}</text>
+  </view>
+</view>
